@@ -1,0 +1,24 @@
+@use '../../../scss/mixins' as m;
+
+.list {
+
+    padding-left: 0;
+
+
+
+    @include m.telefono {
+        @include m.grid(1, 2rem);
+    }
+
+    @include m.tablet {
+        padding: 1rem 9rem;
+        @include m.grid(2, 2rem);
+    }
+
+    @include m.desktop {
+        @include m.grid(3, 2rem);
+    }
+   
+
+    
+}

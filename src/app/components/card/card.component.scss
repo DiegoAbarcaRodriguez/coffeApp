@@ -1,0 +1,91 @@
+@use '../../../scss/variables' as v;
+@use '../../../scss/mixins' as m;
+
+.card {
+    $modificador: &;
+
+    &__container-img {
+        position: relative;
+
+        img {
+            width: 100%;
+            border-radius: 1rem;
+        }
+
+        #{$modificador}__popular {
+            background-color: v.$amarillo;
+            color: v.$negro;
+            border-radius: 37%;
+            padding: 0.7rem 1.8rem;
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            margin: 0;
+            font-weight: 900;
+        }
+    }
+
+    &__content {
+        padding: 0.3rem 0rem 2rem 1.5rem;
+        @include m.grid(2, 1rem);
+
+        #{$modificador}__title {
+            color: v.$primario;
+            font-size: 1.7rem;
+        }
+
+        #{$modificador}__price {
+            background-color: v.$blanco;
+            width: 4rem;
+            margin-left: auto;
+            border-radius: .5rem;
+            padding: 0.2rem 0.5rem;
+            display: grid;
+            place-items: center;
+
+
+            p {
+                color: black;
+                font-weight: bold;
+                text-align: center;
+                margin: 0;
+            }
+        }
+
+        #{$modificador}__title,
+        #{$modificador}__price {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        #{$modificador}__price,
+        #{$modificador}__sold {
+            text-align: end;
+            font-size: 1.2rem;
+        }
+
+
+        #{$modificador}__rating {
+            display: flex;
+            align-items: center;
+            gap: 0.2rem;
+
+            p {
+                margin: 0;
+                font-weight: 900;
+                color: v.$primario;
+            }
+
+            span {
+                color: v.$secundario;
+
+            }
+        }
+
+        #{$modificador}__sold {
+            color: v.$rosa;
+            font-size: 1.4rem;
+        }
+    }
+
+}

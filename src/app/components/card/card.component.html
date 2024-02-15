@@ -1,0 +1,29 @@
+<div class="card">
+    <div class="card__container-img">
+        <img [src]="coffee?.image" alt="Imagen">
+        <p class="card__popular" *ngIf="coffee?.popular"> Popular </p>
+    </div>
+    <div class="card__content">
+        <p class="card__title">{{coffee?.name}} </p>
+        <div class="card__price">
+            <p>{{coffee?.price}} </p>
+        </div>
+        
+
+        <div class="card__rating">
+           
+            <img  [src]="coffee?.rating?'../../../assets/images/Star_fill.svg':'../../../assets/images/Star.svg'" alt="Star">
+            <p> {{coffee?.rating}} <span> {{ coffee?.votes | i18nPlural:numberOfVotesOptions}} </span>  
+            
+            </p>
+        </div>
+
+        <p class="card__sold">
+            {{coffee?.available?.toString() | i18nSelect:availableOptions}}
+        </p>
+
+
+
+
+    </div>
+</div>

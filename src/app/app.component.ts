@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CoffeeService } from './services/coffee.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'coffeApp';
+
+  mustShowAllCoffees: boolean = true;
+
+  constructor(private coffeeService:CoffeeService){}
+
+  onChangeMustShowAllCoffees(value:boolean) {
+    this.mustShowAllCoffees=value;
+    this.coffeeService.mustShowAllCoffees.next(value);
+  }
+
+
 }

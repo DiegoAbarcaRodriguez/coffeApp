@@ -1,0 +1,66 @@
+@use '../scss/variables' as v;
+@use '../scss/mixins' as m;
+
+
+.bg-img {
+    background-image: url('../assets/images/bg-cafe.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 27.5rem;
+
+}
+
+.container {
+
+    background-color: v.$cafeOscuro;
+    background-image: url('../assets/images/vector.svg');
+    background-repeat: no-repeat;
+    background-position: 61% 2%;
+    padding: 2rem;
+    padding-top: 6rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    margin: 0 auto;
+    margin-top: -10rem;
+    margin-bottom: 8rem;
+    width: min(85%, 115rem);
+    border-radius: 1rem;
+
+    .page-description {
+        font-size: 1.6rem;
+        @include m.telefono{
+            width: 44rem;
+        }
+        
+        margin: 1rem auto;
+        text-align: center;
+        font-weight: 900;
+
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin: 3rem 0;
+
+
+        &__element {
+            text-decoration: none;
+            color: v.$primario;
+            font-size: 1.4rem;
+            padding: 1rem 1.5rem;
+
+
+
+            &:hover,
+            &--active {
+                cursor: pointer;
+                background-color: v.$secundario;
+                border-radius: 1rem;
+            }
+
+        }
+    }
+}

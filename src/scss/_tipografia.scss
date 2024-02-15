@@ -1,0 +1,12 @@
+@use './variables' as v;
+
+h1 {
+    font-size: 3.2rem;
+    text-align: center;
+    color: v.$primario;
+    margin-bottom: 1rem;
+}
+
+p {
+    color: v.$secundario;
+}
